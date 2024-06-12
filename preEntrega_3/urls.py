@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from AppPreEntrega3.views import producto, tienda, oferta, ciudad, lista_productos
+from AppPreEntrega3.views import producto, tienda, oferta, ciudad, lista_productos, lista_tiendas, lista_ofertas, lista_ciudades
 
 
 urlpatterns = [
@@ -24,7 +24,10 @@ urlpatterns = [
     path('agrega-producto/<nombre>/<referencia>/<cantidad>/<precio>/<tienda>', producto),
     path('lista-productos/', lista_productos),
     path('agrega-tienda/<nombre>/<codigoTienda>/<ciudad>/<email>', tienda),
+    path('lista-tiendas/', lista_tiendas),
     path('agrega-oferta/<nombre_oferta>/<tienda_donde_aplica>/<porcentaje_oferta>', oferta),
+    path('lista-ofertas/', lista_ofertas),
     path('agrega-ciudad/<nombre>/<pais>', ciudad),
+    path('lista-ciudades/', lista_ciudades),
 
 ]

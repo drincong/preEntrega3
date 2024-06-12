@@ -27,7 +27,7 @@ def oferta (req, nombre_oferta, tienda_donde_aplica,porcentaje_oferta):
     """)
 
 def ciudad (req, nombre, pais):
-    nueva_ciudad = Oferta(nombre = nombre, pais = pais)
+    nueva_ciudad = Ciudad(nombre = nombre, pais = pais)
     nueva_ciudad.save()
 
     return  HttpResponse (f"""
@@ -38,3 +38,19 @@ def lista_productos (req):
     lista = Producto.objects.all()
 
     return render(req, "lista_productos.html", {"lista_productos" : lista})
+
+def lista_tiendas (req):
+    lista = Tienda.objects.all()
+
+    return render(req, "lista_tiendas.html", {"lista_tiendas" : lista})
+
+
+def lista_ofertas (req):
+    lista = Oferta.objects.all()
+
+    return render(req, "lista_ofertas.html", {"lista_ofertas" : lista})
+
+def lista_ciudades (req):
+    lista = Ciudad.objects.all()
+
+    return render(req, "lista_ciudades.html", {"lista_ciudades" : lista})
