@@ -15,19 +15,13 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-from AppPreEntrega3.views import producto, tienda, oferta, ciudad, lista_productos, lista_tiendas, lista_ofertas, lista_ciudades
+from django.urls import path, include
+from AppPreEntrega3.views import producto, tienda, oferta, ciudad, lista_productos, tiendas, ofertas, ciudades, productos
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('agrega-producto/<nombre>/<referencia>/<cantidad>/<precio>/<tienda>', producto),
-    path('lista-productos/', lista_productos),
-    path('agrega-tienda/<nombre>/<codigoTienda>/<ciudad>/<email>', tienda),
-    path('lista-tiendas/', lista_tiendas),
-    path('agrega-oferta/<nombre_oferta>/<tienda_donde_aplica>/<porcentaje_oferta>', oferta),
-    path('lista-ofertas/', lista_ofertas),
-    path('agrega-ciudad/<nombre>/<pais>', ciudad),
-    path('lista-ciudades/', lista_ciudades),
+    path('ferrico/', include('AppPreEntrega3.urls')),
+
 
 ]
