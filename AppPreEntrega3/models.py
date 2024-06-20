@@ -1,3 +1,4 @@
+from typing import Any
 from django.db import models
 
 # Create your models here.
@@ -34,9 +35,8 @@ class Oferta(models.Model):
     porcentaje_oferta= models.IntegerField()
     tienda = models.ManyToManyField(Tienda)
 
-    class Meta():
-        ordering=('nombre_oferta','porcentaje_oferta')
-        unique_together = ('nombre_oferta','porcentaje_oferta')
+
+
 
     def __str__(self):
         return f'{self.nombre_oferta} - {self.porcentaje_oferta}%'
