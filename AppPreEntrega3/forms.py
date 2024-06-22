@@ -6,7 +6,7 @@ class ProductoFormulario(forms.Form):
     precio=forms.IntegerField()
     cantidad= forms.IntegerField()
 
-    
+
 class TiendaFormulario(forms.Form):
     nombre = forms.CharField(max_length=40)
     codigoTienda = forms.IntegerField()

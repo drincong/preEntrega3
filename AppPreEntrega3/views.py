@@ -161,3 +161,26 @@ def oferta_formulario(req):
     else:
         miformulario = OfertaFormulario()
         return render(req,"oferta_formulario.html",{"miformulario": miformulario})
+    
+
+def busqueda_referencia(req):
+    return render(req,"buscar_referencia.html",{})
+
+
+def buscar(req):
+    #return HttpResponse (f'Estoy buscando la referencia {req.GET["referencia"]}')
+    if req.GET["referencia"]:
+
+        referencia = req.GET["referencia"]
+
+        #producto = Producto.objects.get(referencia = referencia)
+        productosEncontrados = Producto.objects.filter(referencia__icontains = referencia)
+
+        return render(req,"resultadoBusqueda.html",{"productosEncontrados": productosEncontrados, "referencia":referencia})
+    else:
+            return render(req,"inicio.html",{"message": "Referencia no existente"})
+   
+
+
+
+    

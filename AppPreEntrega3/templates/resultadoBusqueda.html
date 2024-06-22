@@ -1,0 +1,27 @@
+{% extends 'padre.html' %}
+
+
+{% block contenidoQueCambia %}
+
+<p>Buscamos los productos con la referencia No. {{referencia}}</p>
+<!--<p>  Producto encontrado: {{productosEncontrados}}</p>-->
+
+
+{% if productosEncontrados %}
+    
+    <ul>
+        {% for productosEncontrado in productosEncontrados  %}
+        <li>
+            Encontrado: {{productosEncontrado.nombre}} -- {{productosEncontrado.referencia}}
+        </li>    
+        {% endfor %}
+    </ul>
+    
+    {% else %}
+    
+    <p>No hubo coincidencias en la búsqueda!!!</p>
+
+{% endif %}
+
+{% endblock contenidoQueCambia %}
+  

@@ -1,5 +1,22 @@
 from django.urls import path
-from AppPreEntrega3.views import producto, tienda, oferta, ciudad, lista_productos, tiendas, ofertas, ciudades, inicio,productos, producto_formulario,tienda_formulario, ciudad_formulario, oferta_formulario
+from AppPreEntrega3.views import (
+    producto, 
+    tienda, 
+    oferta, 
+    ciudad, 
+    lista_productos, 
+    tiendas, 
+    ofertas,
+    ciudades, 
+    inicio,
+    productos, 
+    producto_formulario,
+    tienda_formulario,
+    ciudad_formulario,
+    oferta_formulario,
+    busqueda_referencia,
+    buscar,
+)
 
 
 urlpatterns = [
@@ -17,4 +34,8 @@ urlpatterns = [
     path('tienda-formulario/', tienda_formulario, name='TiendaFormulario'),
     path('ciudad-formulario/', ciudad_formulario, name='CiudadFormulario'),
     path('oferta-formulario/', oferta_formulario, name='OfertaFormulario'),
+    path('busqueda-referencia/', busqueda_referencia, name='BuscarReferencia'),
+    path('buscar/', buscar, name='BuscarProducto'),
+    
+
 ]
