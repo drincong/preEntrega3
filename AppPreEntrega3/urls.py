@@ -4,7 +4,6 @@ from AppPreEntrega3.views import (
     tienda, 
     oferta, 
     ciudad, 
-    lista_productos, 
     tiendas, 
     ofertas,
     ciudades, 
@@ -16,6 +15,10 @@ from AppPreEntrega3.views import (
     oferta_formulario,
     busqueda_referencia,
     buscar,
+    lista_tiendas,
+    lista_ofertas,
+    lista_ciudades,
+    lista_productos, 
 )
 
 
@@ -36,6 +39,8 @@ urlpatterns = [
     path('oferta-formulario/', oferta_formulario, name='OfertaFormulario'),
     path('busqueda-referencia/', busqueda_referencia, name='BuscarReferencia'),
     path('buscar/', buscar, name='BuscarProducto'),
+    path('lista-tiendas/', lista_tiendas, name='ListaTiendas'),    
+    path('lista-ofertas/', lista_ofertas, name='ListaOfertas'),    
+    path('lista-ciudades/', lista_ciudades, name='ListaCiudades'),
     
-
 ]

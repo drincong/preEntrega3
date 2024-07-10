@@ -10,10 +10,10 @@ class Tienda(models.Model):
     email = models.EmailField()
 
     def __str__(self):
-        return f'{self.nombre} - {self.codigoTienda}'
+        return f'{self.nombre} - {self.codigoTienda} - {self.ciudad} - {self.email}'
     
     class Meta():
-        ordering=('nombre','codigoTienda')
+        ordering=('nombre','codigoTienda',)
         unique_together = ('nombre','codigoTienda')
 
 class Producto(models.Model):
@@ -36,10 +36,8 @@ class Oferta(models.Model):
     tienda = models.ManyToManyField(Tienda)
 
 
-
-
     def __str__(self):
-        return f'{self.nombre_oferta} - {self.porcentaje_oferta}%'
+        return f'{self.id} - {self.nombre_oferta} - {self.porcentaje_oferta}%'
 
 class Ciudad(models.Model):
     nombre= models.CharField(max_length=40)

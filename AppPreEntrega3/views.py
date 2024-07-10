@@ -40,30 +40,40 @@ def lista_productos (req):
 
     return render(req, "lista_productos.html", {"lista_productos" : lista})
 
+
 def productos (req):
     lista = Producto.objects.all()
 
     return render(req, "productos.html", {"productos" : lista})
 
 
+def lista_tiendas (req):
+    lista = Tienda.objects.all()
+    return render(req, "lista_tiendas.html", {"lista_tiendas" : lista})
+
 def tiendas (req):
     lista = Tienda.objects.all()
-
     return render(req, "tiendas.html", {"tiendas" : lista})
 
 
 def ofertas (req):
     lista = Oferta.objects.all()
-
     return render(req, "ofertas.html", {"ofertas" : lista})
+
+def lista_ofertas(req):
+    lista = Oferta.objects.all()
+    return render(req, "lista_ofertas.html", {"lista_ofertas": lista})
+
 
 def ciudades (req):
     lista = Ciudad.objects.all()
-
     return render(req, "ciudades.html", {"ciudades" : lista})
 
+def lista_ciudades(req):
+    lista = Ciudad.objects.all()
+    return render(req, "lista_ciudades.html", {"lista_ciudades": lista})
+
 def inicio(req):
-    
      return render(req, "inicio.html", {})
 
 def producto_formulario(req):
@@ -180,7 +190,6 @@ def buscar(req):
     else:
             return render(req,"inicio.html",{"message": "Referencia no existente"})
    
+#Vistas basadas en clases CRUD
+#leer de la tabla lo que se ha creado
 
-
-
-    

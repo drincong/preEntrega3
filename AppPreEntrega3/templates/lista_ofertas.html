@@ -1,0 +1,17 @@
+{% extends 'padre.html' %}
+
+{% block contenidoQueCambia %}
+  <h1>Lista de ofertas en nuestras tiendas</h1>
+
+    <ul>
+        
+        {% for ofertas in lista_ofertas %}
+            
+            <li>oferta: {{ofertas.id}} de nombre: {{ofertas.nombre}} con un porcentaje de descuento de: {{ofertas.porcentaje_oferta}}% </li>    
+
+        {% endfor %}
+            
+    </ul>
+
+{% endblock contenidoQueCambia %}
+  

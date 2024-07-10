@@ -14,8 +14,8 @@ class TiendaFormulario(forms.Form):
     email = forms.EmailField()
 
 class CiudadFormulario(forms.Form):
-    nombre = forms.CharField(max_length=40, label="Nombre de la tienda")
-    pais = forms.CharField(max_length=40,label="País donde está la tienda")
+    nombre = forms.CharField(max_length=40, label="Nombre de la ciudad")
+    pais = forms.CharField(max_length=40,label="País:")
 
 
 class OfertaFormulario(forms.Form):

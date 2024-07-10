@@ -1,18 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+{% extends 'padre.html' %}
+
+
+{% block contenidoQueCambia %}
+
+<p>Lista de productos: </p>
     <ul>
         
         {% for producto in lista_productos  %}
-            <li>El producto: {{producto.nombre}} ha sido creado correctamente con la referencia: {{producto.referencia}}</li>    
+            
+            <li>{{producto.nombre}} con la referencia: {{producto.referencia}}</li>    
 
         {% endfor %}
             
     </ul>
-</body>
-</html>
+
+{% endblock contenidoQueCambia %}
+  
+

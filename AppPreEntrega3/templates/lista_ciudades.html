@@ -1,0 +1,20 @@
+{% extends 'padre.html' %}
+
+
+{% block contenidoQueCambia %}
+
+<p>Lista de ciudades: </p>
+    <ul>
+        
+        {% for ciudad in lista_ciudades  %}
+            
+            <li> 
+                <a style="font-weight: bold;">{{ciudad.nombre}} </a> en el país de  <a style="font-weight: bold;">{{ciudad.pais}}</a>
+            </li>    
+
+        {% endfor %}
+            
+    </ul>
+
+{% endblock contenidoQueCambia %}
+  
