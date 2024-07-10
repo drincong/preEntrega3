@@ -10,8 +10,10 @@
             <li>oferta: {{ofertas.id}} de nombre: {{ofertas.nombre}} con un porcentaje de descuento de: {{ofertas.porcentaje_oferta}}% </li>    
 
         {% endfor %}
-            
+        
     </ul>
+
+    <a href="{% url 'OfertaFormulario' %}">Crear oferta</a>
 
 {% endblock contenidoQueCambia %}
   
